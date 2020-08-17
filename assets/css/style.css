@@ -1,0 +1,130 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    .area {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(227, 243, 245);
+        z-index: -1;
+    }
+    
+    .icons {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+    }
+    
+    .icon {
+        position: relative;
+        margin: 5px;
+        padding: 13px;
+        border: 2px solid white;
+        border-radius: 13%;
+        z-index: 4;
+    }
+    
+    .item {
+        opacity: 1;
+        font-size: larger;
+        color: lightblue;
+        cursor: pointer;
+    }
+    
+    .fab::after,
+    .fab::before {
+        z-index: 2;
+    }
+    
+    .fa-google {
+        color: tomato;
+    }
+    
+    .fa-facebook-f {
+        color: rgb(22, 22, 114);
+    }
+    
+    .fa-youtube {
+        color: red;
+    }
+    
+    .fa-telegram {
+        color: rgb(0, 126, 243);
+    }
+    
+    .icon:hover .fa-google {
+        color: rgb(0, 4, 247);
+    }
+    
+    .icon:hover .fa-telegram {
+        color: rgb(2, 255, 116)
+    }
+    
+    .icon:hover .fa-facebook-f {
+        color: rgb(250, 78, 78)
+    }
+    
+    .icon:hover .fa-youtube {
+        color: rgb(8, 8, 8)
+    }
+    
+    .animate_block {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        /* border: 0.5px solid white; */
+        bottom: 0%;
+        left: 0px;
+    }
+    
+    .icon:hover .animate_block {
+        background-color: rgb(69, 183, 228);
+        width: 100%;
+        height: 100%;
+        bottom: 0%;
+        left: 0px;
+        z-index: 2;
+        border-radius: 13%;
+        cursor: pointer;
+        animation: enter 0.3s ease-in;
+    }
+    
+    @keyframes enter {
+        0% {
+            background-color: rgb(69, 183, 228);
+            width: 0%;
+            opacity: 0;
+            height: 0%;
+            bottom: 0%;
+            left: 0px;
+            border-bottom-left-radius: 60%;
+            border-top-right-radius: 0%;
+            z-index: 2;
+        }
+        50% {
+            background-color: rgb(69, 183, 228);
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            bottom: 0%;
+            left: 0px;
+            border-bottom-left-radius: 60%;
+            border-top-right-radius: 50%;
+            z-index: 2;
+        }
+        100% {
+            background-color: rgb(69, 183, 228);
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            bottom: 0%;
+            left: 0px;
+            border-bottom-left-radius: 0%;
+            border-top-right-radius: 0%;
+            z-index: 2;
+        }
+    }
